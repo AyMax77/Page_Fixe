@@ -1,0 +1,82 @@
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    background: linear-gradient(60deg, red,blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    flex: 1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li::before {
+    content: "✔";
+    color: #28a745;
+    padding-right: 8px;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.animated-img {
+    animation: moveUpDown 2s infinite alternate;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+/* Décalage des images */
+.img1 {
+    animation-delay: 0s; /* Pas de décalage pour la première image */
+}
+
+.img2 {
+    animation-delay: 0.7s; /* Décalage léger pour la deuxième image */
+}
+
+.img3 {
+    animation-delay: 1.4s; /* Décalage plus important pour la troisième image */
+}
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13vh; /* Prend toute la hauteur de la fenêtre */
+}
+
+button {
+    padding: 10px 20px; /* Ajoute un peu de padding pour le bouton */
+    font-size: 16px; /* Taille de police du texte */
+    cursor: pointer; /* Change le curseur lorsqu'on passe sur le bouton */
+}
